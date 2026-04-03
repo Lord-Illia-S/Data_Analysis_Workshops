@@ -23,6 +23,23 @@ Code: `len(users.columns)`.
 In this case, function `len()` return the number of columns.
 
 ### Steps 8-11 (Mateusz)
+03.04.2026
+
+#### Steps 8
+Code: `list(users.columns)`.  
+Columns attribute retrieves columns of the dataframe, used `list()` to convert it.
+
+#### Steps 9
+Code: `users.index`.  
+Using index, returns how the data is indexed.
+
+#### Steps 10
+Code: `users.dtypes`.  
+Attribute `dtypes` returns specific data type of each column.
+
+#### Steps 11
+Code: `users['occupation']`.  
+Using brackets notation to print the occupation column.
 
 ### Steps 12-15 (Piotr)
 
@@ -63,6 +80,19 @@ Code: `len(euro12.columns)`.
 Function `len()` return the number of columns (similarly to step 7 in Ex 1).
 
 ### Steps 7-9: (Mateusz)
+03.04.2026
+
+#### Steps 7
+Code: `discipline = euro12[['Team','Yellow Cards','Red Cards']]`.    
+Passing a list of columns names inside the brackets and assigning it to a new dataframe.
+
+#### Steps 8
+Code: `discipline.sort_values(['Red Cards','Yellow Cards'])`.  
+Passing a list to `sort_values()` sorts discipline by Red Cards primarily and uses Yellow Cards as the second key.
+
+#### Steps 9
+Code : `discipline.groupby('Team')['Yellow Cards'].mean()`.  
+Groups the dataset by 'Team' and calculates the average number of 'Yellow Cards' for each team.
 
 ### Steps 10-12: (Piotr)
 
@@ -90,6 +120,10 @@ Code: `drinks.sort_values(by='beer_servings').tail(1)`.
 At first, we sort the values in beer_servings column, after that get the last number.
 
 #### Steps 5: (Mateusz)
+03.04.2026  
+
+Code: `drinks.groupby('continent')['wine_servings'].describe()`.  
+Grouping by continent and using `describe()` to generate a full table of statistics.
 
 #### Steps 6-7: (Kuba)
 8:01 30.03.2026  

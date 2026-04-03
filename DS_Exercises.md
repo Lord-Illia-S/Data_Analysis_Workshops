@@ -42,7 +42,23 @@ Code: `users['occupation']`.
 Using brackets notation to print the occupation column.
 
 ### Steps 12-15 (Piotr)
+3.04.2026
 
+#### Step 12
+Code: `users.occupation.drop_duplicates().count()`
+Funtcion `drop_duplicates()` returns every unique occupation with an index where it apperars for the first time, while function `count()` counts that unique occupations and returns it as a number.
+
+#### Step 13
+Code: `users.occupation.value_counts().head(1)`
+Fuction `value_counts` sorts dataset form the most frequent occupation to the rarest, with it's count, and function `head(1)` shows only the most frequent occupation.
+
+#### Step 14
+Code: `users.describe()`
+Function `describe()` returns the count, mean, standard deviation which is the spread of the ages from the mean, 3 first quartiles which are the % of users below the given age, and also minimum and maximum value for integer columns.
+
+#### Step 15
+Code: `users.describe(include="all")`
+Does the same thing as in last step but also for non integer columns, in  places where it can not count the functions it assigns NaN.
 ### Steps 16-18 (Kuba)
 
 
@@ -95,6 +111,19 @@ Code : `discipline.groupby('Team')['Yellow Cards'].mean()`.
 Groups the dataset by 'Team' and calculates the average number of 'Yellow Cards' for each team.
 
 ### Steps 10-12: (Piotr)
+3.04.2026
+
+#### Step 10
+Code `euro12[euro12['Goals']>6]`
+Only teams with more than 6 goals scored are shown.
+
+#### Step 11
+Code: `euro12[euro12.Team.str.startswith('G')]`
+Function `str.startswith()` returns onlly teams that starts with give letter, in this example 'G'.
+
+#### Step 12
+Code: `euro12.iloc[:, 0:7]`
+Using `iloc[]` to show only selected columns
 
 ### Steps 13-14: (Kuba)
 30.03.2026 - 7:58
@@ -133,3 +162,6 @@ Code 7: `drinks.groupby("continent").median(numeric_only=True)`.
 Task completed with the usage of pandas "filename.groupby().median/mean()
 
 #### Steps 8: (Piotr)
+3.04.2026
+Code: `drinks.groupby('continent').spirit_servings.agg(['mean', 'min', 'max'])`
+Using `group.by` to group dataset by continents, then `agg()` to apply those 3 fuctions at once

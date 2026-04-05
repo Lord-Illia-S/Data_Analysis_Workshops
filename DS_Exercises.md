@@ -114,15 +114,15 @@ Groups the dataset by 'Team' and calculates the average number of 'Yellow Cards'
 3.04.2026
 
 #### Step 10
-Code `euro12[euro12['Goals']>6]`
+Code `euro12[euro12['Goals']>6]`.  
 Only teams with more than 6 goals scored are shown.
 
 #### Step 11
-Code: `euro12[euro12.Team.str.startswith('G')]`
+Code: `euro12[euro12.Team.str.startswith('G')]`.  
 Function `str.startswith()` returns onlly teams that starts with give letter, in this example 'G'.
 
 #### Step 12
-Code: `euro12.iloc[:, 0:7]`
+Code: `euro12.iloc[:, 0:7]`.  
 Using `iloc[]` to show only selected columns
 
 ### Steps 13-14: (Kuba)
@@ -163,5 +163,6 @@ Task completed with the usage of pandas "filename.groupby().median/mean()
 
 #### Steps 8: (Piotr)
 3.04.2026
-Code: `drinks.groupby('continent').spirit_servings.agg(['mean', 'min', 'max'])`
+
+Code: `drinks.groupby('continent').spirit_servings.agg(['mean', 'min', 'max'])`.  
 Using `group.by` to group dataset by continents, then `agg()` to apply those 3 fuctions at once
